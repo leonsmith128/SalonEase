@@ -1,5 +1,7 @@
 *.iml
 .gradle
+# Google API Key
+app/google-services.json
 /local.properties
 /.idea/caches
 /.idea/libraries
