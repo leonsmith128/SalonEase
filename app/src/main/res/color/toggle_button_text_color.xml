@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna teks saat tombol dipilih -->
+    <item android:color="@android:color/white" android:state_selected="true" />
+    <!-- Warna teks saat tombol tidak dipilih -->
+    <item android:color="@color/primary" />
+</selector>

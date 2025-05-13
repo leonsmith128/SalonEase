@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna untuk mode day -->
+    <color name="primary">#FF5B5B</color>
+    <color name="secondary">#FF6A6A</color>
+    <color name="black">#1F1F1F</color>
+    <color name="white">#FEFEFE</color>
+    <color name="bg">#F5F5F5</color> <!-- Warna background day -->
+    <color name="bt">#F7F7F7</color>
+
+    <!-- Warna untuk mode dark -->
+    <color name="primary_dark">#FF8A8A</color> <!-- Merah muda lebih terang untuk kontras di dark mode -->
+    <color name="black_dark">#B0BEC5</color> <!-- Abu-abu terang untuk teks di dark mode -->
+    <color name="white_dark">#212121</color> <!-- Abu-abu gelap untuk latar belakang -->
+    <color name="bg_dark">#1F1F1F</color> <!-- Latar belakang gelap -->
+</resources>

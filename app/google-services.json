@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "792625837607",
+    "project_id": "salonease-ba61d",
+    "storage_bucket": "salonease-ba61d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792625837607:android:3452b471ae8a74a1a14002",
+        "android_client_info": {
+          "package_name": "com.kelompok3.salonease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCasAEbVFn2BRaFrMO92r4iV24iGHQUfl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

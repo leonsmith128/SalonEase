@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <!-- Teks Selamat Datang -->
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELAMAT DATANG"
+                    android:layout_marginHorizontal="55dp"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Teks Pilihan Layanan -->
+                <TextView
+                    android:id="@+id/tvServiceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    android:text="Pilihan Layanan"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- GridLayout untuk Layanan -->
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/serviceContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:columnCount="3"
+                    app:rowCount="2"
+                    app:layout_constraintTop_toBottomOf="@id/tvServiceTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <!-- Item 1: Hair Style -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="0"
+                        app:layout_column="0"
+                        app:layout_rowSpan="1"
+                        app:layout_columnSpan="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/hair_style"
+                            android:padding="6dp">
+
+                            <CheckBox
+                                android:id="@+id/cbHairStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#90FFFFFF"
+                                android:buttonTint="@color/primary"
+                                android:text="Hair Style"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Item 2: Hair Spa -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="0"
+                        app:layout_column="1"
+                        app:layout_rowSpan="1"
+                        app:layout_columnSpan="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/hair_spa"
+                            android:padding="6dp">
+
+                            <CheckBox
+                                android:id="@+id/cbHairSpa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#90FFFFFF"
+                                android:buttonTint="@color/primary"
+                                android:text="Hair Spa"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Item 3: Shampoo -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="0"
+                        app:layout_column="2"
+                        app:layout_rowSpan="1"
+                        app:layout_columnSpan="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shampoo"
+                            android:padding="6dp">
+
+                            <CheckBox
+                                android:id="@+id/cbShampoo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#90FFFFFF"
+                                android:buttonTint="@color/primary"
+                                android:text="Shampoo"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Item 4: Hair Dryer -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="1"
+                        app:layout_column="0"
+                        app:layout_rowSpan="1"
+                        app:layout_columnSpan="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/hair_dryer"
+                            android:padding="6dp">
+
+                            <CheckBox
+                                android:id="@+id/cbHairDryer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#90FFFFFF"
+                                android:buttonTint="@color/primary"
+                                android:text="Hair Dryer"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Item 5: Facial -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="1"
+                        app:layout_column="1"
+                        app:layout_rowSpan="1"
+                        app:layout_columnSpan="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/facial"
+                            android:padding="6dp">
+
+                            <CheckBox
+                                android:id="@+id/cbFacial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#90FFFFFF"
+                                android:buttonTint="@color/primary"
+                                android:text="Facial"
+                                android:textColor="@color/black"
+                                android:textSize="13dp"
+                                android:paddingHorizontal="8dp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Item 6: Makeup -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="1"
+                        app:layout_column="2"
+                        app:layout_rowSpan="1"
+                        app:layout_columnSpan="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/makeup"
+                            android:padding="6dp">
+
+                            <CheckBox
+                                android:id="@+id/cbMakeup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#90FFFFFF"
+                                android:buttonTint="@color/primary"
+                                android:text="Makeup"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.gridlayout.widget.GridLayout>
+
+<!--                Ruang untuk Informasi Tambahan (Landing Page) -->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvInfo"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:text="Informasi lebih lanjut akan ditambahkan di sini."-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:gravity="center"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/serviceContainer"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    <!-- Tombol Reservasi -->
+    <Button
+        android:id="@+id/btnReservasi"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="52dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Tombol Reservasi"
+        android:padding="8dp"
+        android:text="Reservasi"
+        android:background="@drawable/button_background"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        app:itemIconTint="@drawable/bottom_nav_color_selector"
+        app:itemTextColor="@drawable/bottom_nav_color_selector"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
