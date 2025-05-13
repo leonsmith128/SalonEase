@@ -1,4 +1,4 @@
 /build
 
 # Google API Key
-app/google-services.json
+google-services.json
